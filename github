@@ -67,7 +67,7 @@ onece these task completed then next task:::::
 ---------------------------------------------
 ** install git in your pc ( go to browse git download with supporting os )
 ** create one work space in your pc ( crete one new folder for git  example like name  git workspace )
-** open the folder then click the right mouse botton choose open in terminal clik now terminal will be open check get version.
+** open the folder then click the right mouse botton choose open in terminal clik now terminal will be open check git version.
 
 
 onece you install the git you need to set up the user name and email  using these commands
