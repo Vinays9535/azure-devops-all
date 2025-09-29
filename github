@@ -73,7 +73,7 @@ onece these task completed then next task:::::
 onece you install the git you need to set up the user name and email  using these commands
 ------------------------------------------------------------------------------------------------
 
-**  git config --global user.name "vinaykumar"    
+**  git config --global user.name "Vinays9535"      (git hub user name and email id)
 ** git config --global user.email "vinaykumars064@gmail.com"
 ** git config --list    this command shows your username and email
 ** git config --global --edit      this command is used for edit the user name and password
@@ -82,6 +82,23 @@ onece you install the git you need to set up the user name and email  using thes
 
 how can i get that repositories from remote repositories to local ( to my laptop)
 ---------------------------------------------------------------------------------------------
+
+using git clone command get  repositories from remote to local
+
+** git clone 
+go to git hub copy the url 
+
+example  ** git clone https://github.com/Vinays9535/ner-flask-.git
+
+** dir       this command used to confirm the repositories is clone or not and shows the length name.
+** cd "what shows the length name that name mention"
+example  ** cd ner-flask-    just enter
+
+** now go to vs code using this command in that vs code repositories was clone 
+* cd .       just enter.
+
+
+
 
 
 
