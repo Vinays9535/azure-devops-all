@@ -1,0 +1,49 @@
+
+
+
+
+🔹 What is Git?
+----------------------
+
+Git is a tool (a version control system).
+
+It helps you track changes in your code (like keeping a history of edits).
+
+You can undo mistakes, work with different versions, and collaborate with others.
+
+Think of it like a time machine for your code.
+
+👉 Example:
+If you write a program today, and tomorrow you mess it up, Git lets you go back to the older version.
+
+
+🔹 What is GitHub?
+-----------------------
+
+GitHub is a website (a cloud platform).
+
+It stores your Git repositories online.
+
+It makes it easy to share code, collaborate with teams, and use Git on the internet.
+
+It also has features like issues, pull requests, CI/CD, and project boards.
+
+👉 Example:
+Git is like writing your notes in a notebook.
+GitHub is like uploading that notebook online so your friends can read, edit, and add to it.
+
+
+🔑 Key Difference:
+-----------------------
+
+Git = Local tool (on your computer) for version control.
+
+GitHub = Online platform that uses Git to share and collaborate.
+
+
+⚡ In short:
+---------------
+
+Git → Version control system.
+
+GitHub → Hosting + collaboration platform for Git repositories.
