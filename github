@@ -47,3 +47,41 @@ GitHub = Online platform that uses Git to share and collaborate.
 Git → Version control system.
 
 GitHub → Hosting + collaboration platform for Git repositories.
+
+
+
+how to work
+--------------
+
+you should be know create these TASKS::::
+------------------------------------------------
+
+** create an account in github
+**create an organization
+**create repo
+**create team
+**add team members to team
+**provide access to the repo
+
+onece these task completed then next task:::::
+---------------------------------------------
+** install git in your pc ( go to browse git download with supporting os )
+** create one work space in your pc ( crete one new folder for git  example like name  git workspace )
+** open the folder then click the right mouse botton choose open in terminal clik now terminal will be open check get version.
+
+
+onece you install the git you need to set up the user name and email  using these commands
+------------------------------------------------------------------------------------------------
+
+**  git config --global user.name "vinaykumar"    
+** git config --global user.email "vinaykumars064@gmail.com"
+** git config --list    this command shows your username and email
+** git config --global --edit      this command is used for edit the user name and password
+
+
+
+how can i get that repositories from remote repositories to local ( to my laptop)
+---------------------------------------------------------------------------------------------
+
+
+
