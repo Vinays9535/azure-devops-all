@@ -73,10 +73,10 @@ onece these task completed then next task:::::
 onece you install the git you need to set up the user name and email  using these commands
 ------------------------------------------------------------------------------------------------
 
-**  git config --global user.name "Vinays9535"      (git hub user name and email id)
+**  git config --global user.name "Vinays9535"                   (git hub user name and email id)
 ** git config --global user.email "vinaykumars064@gmail.com"
-** git config --list    this command shows your username and email
-** git config --global --edit      this command is used for edit the user name and password
+** git config --list                                              this command shows your username and email
+** git config --global --edit                                     this command is used for edit the user name and password
 
 
 
@@ -157,3 +157,60 @@ in my case i creting one file in remote repo, then i come and see to local repo 
 used git pull command then used this command once then saw my local repo that created file showed.
 
 
+
+
+BRANCHES
+----------
+
+Branches let you work on new features or fixes without disturbing the main code.
+They help in keeping code separate until it’s tested and ready.
+Multiple people can work in parallel on different tasks.
+Once finished, a branch can be merged into the main branch safely.
+👉 In short: Branches = safe workspace for new changes.
+
+diffrent developers will be working on diffrent diffrent feauctres so clone the code local repo to main branch in remote repo then creating own branches then start working our own 
+branches onece completing the work then push the branches to the remote repo.
+
+how to create branches
+-------------------------
+
+** git branch                             it shows list of branches
+** git branch branch-name                 this command used to creating a new branch
+** git branch                             it shows list of branches
+** git checkout branch-name               this command used  switch one branch to one branch
+** git push -u origin branch-name         this command is used to Push branch to GitHub
+** git branch -d branch-name              this command is used to Delete a branch (local)
+** git push origin --delete branch-name   this command is used to Delete a branch from GitHub (remote)
+
+
+HOW TO MERGE BRANCHES IN TO MAIN BRANCH
+---------------------------------------------
+
+🔹 Steps to merge using GitHub UI
+
+Push your branch to GitHub
+From your local CLI:
+
+** git push -u origin branch-name
+
+
+Open GitHub website → Go to your repository.
+
+At the top, GitHub will show a message like:
+“branch-name had recent pushes, compare & pull request” → click Compare & pull request.
+
+On the Pull Request page:
+
+Make sure the base branch = main.
+
+Compare branch = your branch.
+
+Add a title and description (optional).
+
+Click Create Pull Request.
+
+On the next screen → click Merge Pull Request.
+
+Choose Confirm merge.
+
+✅ Done! Your branch is merged into main.
