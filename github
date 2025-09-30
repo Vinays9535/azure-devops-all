@@ -98,6 +98,21 @@ example  ** cd ner-flask-    just enter
 * code .       just enter.
 
 
+### onece we clone to remote repo to local repo the files should be go to working area in this area we do any editing, changing, adding etc, then check the status using "git status" command 
+now dont show any status becuse git will not start tracking.
+### then onece complited the work move the file working area to staging area using "git add ."  command then check the command git status using "git status" command 
+now status will be show and git will be tracked.
+### then move the file staging area to local repo and commit the changes in file using "git commit" command.
+### then using "git log" commnad this command shows commit id,author,date.
+### 
+
+**edit the cloned file in vs code and save it.
+
+then come to cli :::
+** git status                 git status = check what’s going on in your repo.
+** git add .                 git add . = take all changes and get them ready for commit.
+** git status
+
 
 
 
