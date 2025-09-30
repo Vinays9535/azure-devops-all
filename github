@@ -146,5 +146,11 @@ fetch → URL used to pull changes from remote.
 push → URL used to push changes to remote.
 
 
+git pull
+--------------
+to get the changes from remote repo in to your local repo we can use " git pull " command it will get the changes and do merge as well.
+
+example:  in some cases other developer will push the code or creating the one more file or developer will change somthing in remote repo, 
+          but not updating in my local repo,we need updating my local repo also that time using git pull command this.
 
 
