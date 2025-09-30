@@ -95,7 +95,7 @@ example  ** git clone https://github.com/Vinays9535/ner-flask-.git
 example  ** cd ner-flask-    just enter
 
 ** now go to vs code using this command in that vs code repositories was clone 
-* cd .       just enter.
+* code .       just enter.
 
 
 
