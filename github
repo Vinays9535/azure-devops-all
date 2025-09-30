@@ -130,7 +130,7 @@ now status will be show and git will be tracked.
 ### " git reset <previous commit id not latest one>    in this case edited the file then move the file working area to staging area to local repo, but i did some mistakes
       in the file or still some changes are needing in that file soo i using the command file will move to local repo to staging area to working area. then check status.
 
-
+### " git revert head "  this command used for undo from the remote repo.
 
 
 ** git remote -v
