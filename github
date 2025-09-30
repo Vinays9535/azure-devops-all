@@ -153,4 +153,7 @@ to get the changes from remote repo in to your local repo we can use " git pull 
 example:  in some cases other developer will push the code or creating the one more file or developer will change somthing in remote repo, 
           but not updating in my local repo,we need updating my local repo also that time using git pull command this.
 
+in my case i creting one file in remote repo, then i come and see to local repo that time i created file will not showed in local repo that time i was
+used git pull command then used this command once then saw my local repo that created file showed.
+
 
