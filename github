@@ -97,6 +97,10 @@ example  ** cd ner-flask-    just enter
 ** now go to vs code using this command in that vs code repositories was clone 
 * code .       just enter.
 
+**edit the cloned file in vs code and save it. 
+then come to cli :::
+(note :: this is git forword operation)
+----------------------------------------
 
 ### onece we clone to remote repo to local repo the files should be go to working area in this area we do any editing, changing, adding etc, then check the status using "git status" command 
 now dont show any status becuse git will not start tracking.
@@ -104,15 +108,42 @@ now dont show any status becuse git will not start tracking.
 now status will be show and git will be tracked.
 ### then move the file staging area to local repo and commit the changes in file using "git commit" command.
 ### then using "git log" commnad this command shows commit id,author,date.
-### 
+### using "git log --oneline" this command is used to show details in one line.
+### then using "git push" this command is using move the editing file local repo to remote repo or git repo.
+### now go to git repo see the changes in the file what we are changed in the file.
 
-**edit the cloned file in vs code and save it.
+** git status                                                         git status = check what’s going on in your repo.
+** git add .  or git add <file name>                                  git add . = take all changes and get them ready for commit.
+** git status                                                         git status = check what’s going on in your repo. 
+** git commit -m "your messge"                                        using this command save changes locally
+** git log                                                            this coomand used show full details and commit id 
+** git log --oneline  (git log --oneline -2 or -3)                    this coomand used show short details and commit id 
+** git push                                                           this command is used for move or pusg the editng file local repo to remote repo
 
-then come to cli :::
-** git status                 git status = check what’s going on in your repo.
-** git add .                 git add . = take all changes and get them ready for commit.
-** git status
 
+(git riverse opration)
+-------------------------
+
+###  " git restore <file name>"  this command is used to undo changes in your working directory only.
+### " git restore --staged <file name>   in this case alredy move the file working area to staging area but that file are needed some changes that time using this command,
+      this command used to move the file staging area to working area. then check status using "git status" file came in to working area.
+### " git reset <previous commit id not latest one>    in this case edited the file then move the file working area to staging area to local repo, but i did some mistakes
+      in the file or still some changes are needing in that file soo i using the command file will move to local repo to staging area to working area. then check status.
+
+
+
+
+** git remote -v
+
+👉 Shows the remote repositories linked to your local Git project, along with their fetch and push URLs.
+Example output:
+bash
+Copy code
+origin  https://github.com/user/repo.git (fetch)
+origin  https://github.com/user/repo.git (push)
+origin → name of the remote (default name when you clone).
+fetch → URL used to pull changes from remote.
+push → URL used to push changes to remote.
 
 
 
