@@ -1,0 +1,69 @@
+
+
+                                                                                                            MAVEN
+                                                                                                          ---------
+
+
+WHAT IS MAVEN?
+-----------------
+
+*Maven is a build automation and project management tool mainly used in Java projects.
+*onece developer create the source code then move to remote repo but computer or servers can't understand source code understand only binaries (like 0,1 )soo maven using maven,
+maven is compile the source code and produce artifact.
+
+     what is artifact
+     ---------------------
+
+           *In Maven (or software in general), an artifact is simply the final output file of your project (like a JAR, WAR, or ZIP) that can be shared or reused.
+              👉 Example:
+                         You write Java code.
+                         Maven builds it.
+                         The artifact is the packaged file (say, myapp-1.0.jar , war,ear,gip,exe,msi)
+                                    So in simple words:
+                                       Artifact = the finished product of your project build.
+
+
+
+
+WHY WE NEED TO BUILD TOOLS
+-----------------------------
+
+*We need build tools because they automate repetitive work in software development.
+*Without them → you must manually compile, collect libraries, run tests, and package everything.
+*With them → just run one command, and the tool does it all for you.
+
+👉 In simple words:
+Build tools save time, avoid mistakes, and make building projects easy and consistent.
+
+
+*build tool will healp us to transform your source code into binary / artifact
+*It will also organise the source code , it will also generate the folder structure . it will manage build tools
+*It will help us to create the documentation
+*Build tools we can also integrate the tools ex like sonarqube,jenkins
+
+
+WHY WE USED MAVEN
+---------------------
+
+*maven is developed by using java,and developping apache
+*maven is a open source tool
+*maven is populor build tool for java applicationes
+*Dependency management → Maven automatically downloads required libraries (JARs) from a central repository.
+*Build automation → One command can compile, test, package, and deploy your project.
+*Standard project structure → Maven enforces a common folder structure so all projects look the same.
+*Reusability → You can easily share your project’s artifact (JAR/WAR) with others.
+*Integration → Works well with CI/CD tools (Jenkins, SonarQube, etc.).
+👉 In simple words:
+We use Maven to save time, avoid manual work, and keep projects consistent and easy to manage.
+
+
+
+build tools for diffrent languages
+---------------------------------------
+*java : maven,graddle,ant
+*nodejs : grunt
+*.net : ms build
+*python : python
+*c,c++ : make
+
+
