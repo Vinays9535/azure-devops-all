@@ -112,3 +112,63 @@ CLOUD CHARACTERSTICS
 *High availability & reliability – Cloud is designed to be available 24/7 with backups.
 *Security – Data and applications are protected using encryption and access control.
 👉 In short: Cloud is flexible, scalable, available anytime, anywhere, and you pay only for what you use.
+
+
+Why is Cloud popular today?
+* Because it reduces IT costs, provides flexibility, supports remote work, and allows businesses to grow faster.
+
+
+
+🔹 Basic Azure Q&A
+----------------------------
+
+Q1. What is Microsoft Azure?
+👉 Azure is Microsoft’s cloud computing platform that provides services like servers, storage, databases, networking, and AI through the internet.
+
+Q2. What are the benefits of using Azure?
+👉 Cost saving, scalability, global reach, high security, and pay-as-you-go model.
+
+Q3. What are the types of cloud deployment models in Azure?
+👉 Public Cloud, Private Cloud, Hybrid Cloud.
+
+Q4. What are the main service models in Azure?
+👉 IaaS (Infrastructure as a Service), PaaS (Platform as a Service), SaaS (Software as a Service).
+
+🔹 Azure Services Q&A
+--------------------------------
+
+Q5. What is Azure Virtual Machine (VM)?
+👉 A VM is a computer running in the cloud. You can install apps, OS, and use it like your own server.
+
+Q6. What is Azure App Service?
+👉 It’s a PaaS service to host web apps, mobile apps, and APIs without managing servers.
+
+Q7. What is Azure Storage?
+👉 A service to store files, databases, and backups. Types: Blob Storage, File Storage, Queue Storage, Table Storage.
+
+Q8. What is Azure Virtual Network (VNet)?
+👉 It allows your Azure resources (VMs, databases) to securely communicate with each other.
+
+Q9. What is Azure Active Directory (AAD)?
+👉 It’s an identity and access management service. It controls who can log in and what they can access.
+
+Q10. What is Azure Functions?
+👉 A serverless computing service – you just write code and Azure runs it when triggered (no need to manage servers).
+
+🔹 Security & Management Q&A
+------------------------------------
+
+Q11. What is Azure Resource Group?
+👉 A container to manage and organize resources like VMs, storage, and databases.
+
+Q12. What is Azure Monitor?
+👉 A tool to monitor the performance and health of your resources.
+
+Q13. What is Azure Key Vault?
+👉 A service to store secrets, passwords, keys, and certificates securely.
+
+Q14. What is Azure DevOps?
+👉 A service for CI/CD, code repositories, pipelines, and automation.
+
+Q15. What is Azure Cost Management?
+👉 A tool to track, manage, and optimize cloud spending.
