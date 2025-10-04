@@ -1,0 +1,87 @@
+
+
+
+
+                                                                                                          CLOUD
+                                                                                                       -----------
+
+
+WHAT IS CLOUD
+----------------
+
+*Cloud means using the internet to store data and run applications instead of keeping them only on your own computer.
+*It’s like renting computers, storage, and software from companies (like AWS, Azure, Google Cloud).
+*You can access it anytime, anywhere using the internet.
+*No need to buy and maintain big servers, the cloud provider manages everything.
+👉 In short: Cloud = Computers, storage, and software available on the internet.
+
+EXAMPLE
+
+*Think about Google Drive or Gmail.
+*You don’t keep your emails or files only on your laptop.
+*They are stored in the cloud (Google’s servers).
+*You can open them on any phone or computer anywhere in the world, just by logging in.
+👉 Same way, companies use cloud services (like AWS, Azure, GCP) to store data, run apps, and manage servers without buying big machines.
+
+
+WHAT IS CLOUD COMPUTING
+-------------------------
+*cloud computing is the delivery of computing services including servers,storage,database,networking,software,security over the cloud to offer faster innovation.
+
+WHY CLOUD COMPUTING
+--------------------
+*No big setup cost → You don’t need to buy expensive servers.
+*Pay as you use → Like electricity, you only pay for what you use.
+*Access anywhere → You can use apps and data from any device with internet.
+*Scalable → If you need more power or storage, you can get it in minutes.
+*Safe & Reliable → Cloud companies take care of backups and security.
+*Faster → You can quickly build and run applications without waiting for hardware.
+*👉 In short: Cloud computing saves money, gives flexibility, and makes work faster and easier.
+
+
+CLOUD COMPUTING DEPLOYMENT MODELS
+-------------------------------------
+
+1 Public Cloud:::
+*Services are provided over the internet by cloud companies (like AWS, Azure, Google Cloud).
+*Anyone can use it by paying money.
+*Example: Gmail, Google Drive, AWS EC2.
+✅ Cheap, scalable, no maintenance.
+❌ Less control.
+
+2 Private Cloud:::
+*Cloud is used by only one company.
+*Hosted either in their own data center or by a vendor.
+*Example: Banks or Government offices using cloud only for them.
+✅ More security, more control.
+❌ Expensive.
+
+3 Hybrid Cloud:::
+*A mix of public + private cloud.
+*Company keeps sensitive data in private cloud and uses public cloud for normal tasks.
+*Example: A hospital stores patient data in private cloud but uses public cloud for running apps.
+✅ Balanced cost, flexibility, and security.
+
+👉 In short:
+*Public = Shared & Cheap
+*Private = Secure & Expensive
+*Hybrid = Mix of Both
+
+
+DIFFRENT CLOUD COMPUTING SERVICE MODELS
+------------------------------------------
+
+1 INFRASTRCTURE AS A SERVICE MODEL (IAAS):::
+
+ in this service model application,data,runtime,middleware,o/s,this are all services managed by user.
+ then vertualization,servers,storage,networking these are all services managed by vender
+
+2 PLATFORM AS A SERVICE MODEL (PAAS):::
+
+ in this service model only application,and data services managed by user.
+ remaining services managed by vendor.
+
+3 SOFTWARE AS A SERVICE MODEL (SAAS):::
+
+ in this service model all services managed a vendor.
+becuse this is most effective cloud computing service models in now a days.
