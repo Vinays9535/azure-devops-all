@@ -1,0 +1,54 @@
+
+
+What is an Azure Resource Group? AND How to create                                                                                                                                         class:3
+---------------------------------------------------------
+
+
+✅ What is an Azure Resource Group?
+
+A Resource Group is a container in Azure that holds related resources (like VMs, storage, networks, etc.).
+It helps you organize, manage, and control access to those resources as a group.
+All resources in a group should share the same lifecycle (created, updated, deleted together).
+
+
+🛠️ How to Create a Resource Group (Simple Steps)
+👉 Using Azure Portal:
+
+Go to portal.azure.com
+Search for “Resource groups”
+Click “+ Create”
+Select your Subscription
+Enter a name for the Resource Group (e.g., myResourceGroup)
+Choose a Region (e.g., East US)
+Click “Review + Create”, then Create
+
+
+how to create quick "vm"
+--------------------------------
+
+✅ Option 1: Create a Quick VM from Azure Portal (GUI - Easy)
+🔹 Steps:
+
+Go to https://portal.azure.com
+Click "Create a resource" > "Virtual Machine"
+
+Fill in the basics:
+
+Subscription: Choose your subscription
+Resource Group: Create new or use existing
+VM Name: e.g., quickvm01
+Region: e.g., East US
+Image: Windows or Linux (e.g., Ubuntu LTS)
+Size: e.g., Standard B1s (1 vCPU, 1GB RAM – free tier eligible)
+
+Authentication:
+
+Linux: SSH key or password
+Windows: Username + password
+
+Click "Review + Create"
+
+Wait for validation → Click "Create"
+✅ VM will be deployed in ~2–3 minutes.
+
+
