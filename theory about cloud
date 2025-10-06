@@ -172,3 +172,67 @@ Q14. What is Azure DevOps?
 
 Q15. What is Azure Cost Management?
 👉 A tool to track, manage, and optimize cloud spending.
+
+
+
+
+THREE TYPES OF RESORCES IN AZURE
+-----------------------------------------
+
+🌍 1. Global Resources::::::
+
+These are available across all regions and are not tied to a specific Azure region.
+🔹 Examples:
+Azure Active Directory (AAD)
+Azure DNS
+Azure Traffic Manager
+Azure Content Delivery Network (CDN)
+
+✅ Characteristics:
+
+One global instance serves all users.
+Useful for services that require a global reach.
+You don’t choose a region when creating them.
+
+
+
+📍 2. Regional Resources::::::
+
+These resources are deployed in a specific Azure region (like East US, West Europe, etc.) and reside in one or more datacenters in that region.
+
+🔹 Examples:
+Virtual Machines (VMs)
+Storage Accounts
+Virtual Networks
+App Services
+Key Vault
+
+✅ Characteristics:
+
+You must select a region during creation.
+You can replicate them to other regions for redundancy or disaster recovery.
+Latency and availability are based on the chosen region.
+
+
+
+🏢 3. Zonal (or "Zone-specific") Resources:::::
+
+These are regional resources but with more specific placement — they are pinned to a specific Availability Zone within a region.
+
+🔹 Examples:
+Zonal VMs
+Zonal Managed Disks
+Standard Load Balancers (zonal fronted)
+
+✅ Characteristics:
+
+Help improve high availability and fault isolation.
+You specify which Availability Zone (1, 2, or 3) within a region.
+If one zone fails, other zones can keep working if you’ve architected for redundancy.
+
+
+📊 Summary Table
+Resource Type	Scope	Region Selection	Use Case
+Global	All of Azure	❌ No	Identity, DNS, CDN, global routing
+Regional	Single Region	✅ Yes	VMs, storage, databases
+Zonal	Availability Zone	✅ (Zone also)	High availability, redundancy
