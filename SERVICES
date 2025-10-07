@@ -52,3 +52,273 @@ Wait for validation → Click "Create"
 ✅ VM will be deployed in ~2–3 minutes.
 
 
+
+                                                                               NETWORKING                                                       class 4
+                                                                           -----------------
+
+WHAT IS NETWORKING
+--------------------------
+*connecting things or people to share resources, information, or support. 
+
+
+What is Networking in Azure?
+-------------------------------
+*In Microsoft Azure, networking refers to the set of tools, services, and configurations that allow resources (like virtual machines, databases, apps) 
+ to communicate with each other, with the internet, and with on-premises environments — securely and efficiently.
+
+
+🌐 What is an IP Address?
+-----------------------------
+
+📌 Simple Definition:
+    *An IP address is a numerical label that identifies a device on a network and allows it to communicate with other devices.
+
+🧠 Why IP Addresses Matter:
+    *They help route data to the correct destination.
+    *Without them, devices couldn’t talk to each other over the internet or a local network.
+
+✅ IP Address Example:
+    192.168.1.10
+
+📂 Types of IP Addresses
+    1. IPv4 (Most common)
+       Format: xxx.xxx.xxx.xxx (four numbers separated by dots)
+       Example: 192.168.1.1
+       Has about 4.3 billion possible addresses.
+
+    2. IPv6 (Newer, larger)
+       Format: Eight groups of hexadecimal numbers
+       Example: 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+       Supports trillions of devices (needed as the internet grows).
+
+🔄 Two Main Categories of IP Addresses
+    Type	Description	Example
+   *Private IP	Used inside local networks (home, office). Not visible on the internet.	192.168.x.x, 10.x.x.x
+   *Public IP	Used to identify devices on the internet.	Assigned by your ISP.
+
+🖥️ Static vs Dynamic IP
+    Type	Description
+   *Static IP	Fixed and doesn’t change. Useful for servers.
+   *Dynamic IP	Changes over time. Assigned by your internet provider or DHCP.
+
+
+
+IP ADRESS CLASS
+-----------------
+
+                                     RANGE                      
+class A --------- N,H,H,H         
+subnet mask------255,0,0,0          0 TO 126
+
+
+class B --------- N,N,H,H                                      ( N means network ,H means host )
+subnet mask------255,255,0,0        128 TO 191                   1 bit = 8 bites
+
+
+class C --------- N,N,N,H         
+subnet mask------255,255,255,0      192 TO 223
+
+
+NETWORK = its a collection of ip adress
+ADRESS =  its a range of ip adress
+
+example : karnataka is network under the karnataka all districts is adress
+
+* ip adress is a 32 bit max becuse every coloum has 8 bits
+ex   8,8,8,8
+
+
+🔐 2. Private IP Address Ranges (RFC 1918)
+----------------------------------------------
+
+These are not routable on the internet — used inside home and corporate networks.
+
+Class	            Private IP Range	                 Subnet Mask
+ A           10.0.0.0 – 10.255.255.255 	            255.0.0.0 (/8)
+ B	         172.16.0.0 –  172.31.255.255	         255.240.0.0 (/12)
+ C	         192.168.0.0 – 192.168.255.255	       255.255.0.0 (/16)
+
+
+HOW TO CALCULATE IP'S
+--------------------------
+
+EXAMPLE 1
+i have one requirment i need 256 ip's
+
+10.10.20.0/24
+
+formula
+32-24=8  2*n  2*8=2*2*2*2*2*2*2*2=256 ip's
+
+ 10.10.20.1
+ 10.10.20.2
+ 10.10.20.3
+ |
+ |
+ |
+ 10.10.20.255
+
+
+EXAMPLE 2
+i have one requirment i need 512 ip's
+
+172.16.0.0/23
+
+32-23=9 2*9=512
+
+172.16.0.0
+172.16.0.1
+172.16.0.2
+172.16.0.3
+|
+|
+|172.16.0.255
+
+172.16.1.0
+172.16.1.1
+172.16.1.2
+172.16.1.3
+|
+|
+|
+172.16.1.255
+
+EXAMPLE 3
+i have one requirment i need 512 ip's with 3 subnets
+
+172.16.0.0/23
+total number of ip's is 512
+
+subnet1 : 256
+subnet2 : 128
+subnet3 : 128
+
+*web subnet1 : 256 ips
+
+172.16.0.0
+172.16.0.1
+172.16.0.3
+|
+|
+|
+172.16.0.255
+172.16.1.0
+
+*appsubnet2 : 128
+
+172.16.1.1
+172.16.1.2
+172.16.1.3
+|
+|
+|
+172.16.1.128
+
+
+*databasesubnet3 : 128
+
+172.16.1.129
+172.16.1.130
+172.16.1.131
+|
+|
+|
+172.16.1.255
+172.16.2.0
+172.16.2.1
+
+
+NOTE:
+172.16.0.0/23    networking address
+172.16.0.0        ip address
+
+
+
+📘 What is CIDR?
+-------------------------
+CIDR stands for Classless Inter-Domain Routing.
+It is a method used to allocate IP addresses and manage IP networks more efficiently than the old class-based system (Class A, B, C).
+
+🔹 Simple Definition:
+CIDR is a way to represent IP addresses and their associated network size using a slash ( / ) and a number.
+This is called CIDR notation.
+
+✅ Example of CIDR Notation:
+192.168.1.0/24
+192.168.1.0 → Network address
+/24 → Subnet mask (means the first 24 bits are the network part)
+
+🧠 Why CIDR Is Important:
+Before CIDR, IPs were divided into fixed-size classes (A, B, C), which often wasted IPs.
+CIDR allows:
+Flexible allocation of IP addresses
+Efficient use of IPv4 space
+Better routing aggregation
+
+
+📏 CIDR and Subnet Masks
+
+CIDR notation replaces the older subnet mask format.
+Here are some common examples:
+
+CIDR	       Subnet Mask	      # of IPs	    Description
+/8	         255.0.0.0	       16,777,216  	Very large networks
+/16	         255.255.0.0	       65,536	      Large network
+/24	         255.255.255.0	      256	        Common for LANs
+/30	         255.255.255.252	     4	      Point-to-point links
+/32	         255.255.255.255	     1	      Single IP (host only)
+
+Note: Of the total IPs in a subnet, 2 are reserved: one for the network address, and one for the broadcast address.
+
+
+
+
+🏗️ What is 3-Tier Architecture?
+---------------------------------------
+3-tier architecture is a software design model that separates an application into three logical layers, each with its own responsibility.
+It’s commonly used in web applications and cloud environments (like Azure or AWS) to improve scalability, maintainability, and security.
+
+
+🔍 The 3 Tiers Explained
+
+| Tier                     | Also Called                  | Purpose                                  | Example                       |
+| ------------------------ | ---------------------------- | ---------------------------------------- | ----------------------------- |
+| **1. Presentation Tier** | UI / Front-end               | Handles user interface and interactions  | Web browser, mobile app       |
+| **2. Application Tier**  | Business Logic / Middle-tier | Processes data, contains the app’s logic | API, web server, backend code |
+| **3. Data Tier**         | Database Layer               | Stores and retrieves data                | SQL Server, MySQL, MongoDB    |
+
+
+
+
+🌐 Azure Virtual Network (VNet) – Key Information
+✅ What is Azure Virtual Network (VNet)?
+----------------------------------------------------------
+
+Azure Virtual Network (VNet) is a private, isolated network in Azure where you can run your Azure resources (like virtual machines, databases, and apps) 
+securely — just like you would in your own on-premises data center.
+It’s like creating your own private network in the cloud.
+
+🎯 Why Use VNet?
+-------
+*Secure communication between Azure resources
+*Connect to on-premises networks
+*Control traffic with subnets, firewalls, NSGs
+*Enable hybrid cloud scenarios
+*Host internet-facing and internal apps
+
+
+NOTE:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+* the physical area of the data center is cold region.
+* the physical data center is convert to vertulization is cold zone.
+* its a verulized data centtre is cold zone
+*region will represents VNET
+*VNET are region specific
+*zones will represents subnets
+*in one data center create a multiple subnets
+*in one subnet can't share maltiple data center
+
+
+ 
+
+
+
