@@ -409,7 +409,7 @@ HYBRID CONNECTIVITY OPTIONES
 - And the Enable Vnet Peering - if the vnet’s are part of same region.
 
                          *then try
-- Global Regions - if the vnet’s are part of different regions.
+- Global Regions - if the vnet’s are part of different regions,we need to enable global vnet peering.
 
 
 
