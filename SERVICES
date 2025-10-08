@@ -355,6 +355,16 @@ It’s like creating your own private network in the cloud.
 *Host internet-facing and internal apps
 
 
+WHAT IS SUBNET?
+------------------
+*A subnet means sub-network — a small part of a larger network.
+*It helps divide a big network into smaller, easier-to-manage parts.
+*Each subnet has its own range of IP addresses.
+*It improves security and network performance.
+🧠 Example:
+*If your company has a big network, you can create one subnet for HR, one for IT, and one for Sales — all still connected but separated for better control.
+
+
 NOTE:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 * the physical area of the data center is cold region.
 * the physical data center is convert to vertulization is cold zone.
