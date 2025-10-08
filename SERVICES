@@ -56,15 +56,21 @@ Wait for validation → Click "Create"
                                                                                NETWORKING                                                       class 4
                                                                            -----------------
 
-WHAT IS NETWORKING
+WHAT IS NETWORKING IN GENARAL?
 --------------------------
 *connecting things or people to share resources, information, or support. 
 
 
 What is Networking in Azure?
 -------------------------------
-*In Microsoft Azure, networking refers to the set of tools, services, and configurations that allow resources (like virtual machines, databases, apps) 
- to communicate with each other, with the internet, and with on-premises environments — securely and efficiently.
+*A network is a collection of interconnected devices (hosts,routers,switches)that exchange data using specific protocols (like TCP/IP).
+it can be local area network(LAN),wide area network((WAN),or other configurations.
+
+
+
+WHAT IS THE INTERNET?
+--------------------------
+* Thes internet is a global network of networks that uses the TCP/IP protocol suite to link devices worldwide.
 
 
 🌐 What is an IP Address?
@@ -287,6 +293,40 @@ It’s commonly used in web applications and cloud environments (like Azure or A
 | **2. Application Tier**  | Business Logic / Middle-tier | Processes data, contains the app’s logic | API, web server, backend code |
 | **3. Data Tier**         | Database Layer               | Stores and retrieves data                | SQL Server, MySQL, MongoDB    |
 
+
+
+WHAT ARE PORTS?
+----------------
+* ports are logical access points through which data enters or leaves a device on a network.each port is associated with a specific protocol or service.
+
+| **Port**        | **Protocol**   | **Purpose**                                                |
+| --------------- | -------------- | ---------------------------------------------------------- |
+| **22**          | SSH            | Used to connect to **Linux VMs/Instances** securely        |
+| **3389**        | RDP            | Used to connect to **Windows VMs/Instances** remotely      |
+| **80**          | HTTP           | For **web traffic** (websites without SSL)                 |
+| **443**         | HTTPS          | For **secure web traffic (SSL/TLS)**                       |
+| **53**          | DNS            | Domain Name System communication                           |
+| **25 / 587**    | SMTP           | Sending emails                                             |
+| **1433**        | SQL Server     | Microsoft SQL Database connections                         |
+| **3306**        | MySQL          | MySQL Database connections                                 |
+| **5432**        | PostgreSQL     | PostgreSQL Database connections                            |
+| **27017**       | MongoDB        | MongoDB database connections                               |
+| **8080**        | HTTP Alternate | Often used for application servers (Tomcat, Jenkins, etc.) |
+| **5000 / 5001** | Custom APIs    | Commonly used for REST APIs and apps                       |
+
+
+
+WHAT IS INBOUND AND OUTBOUND TRAFFIC?
+--------------------------------------------
+* inbound trafic refers to incoming data packets in to network,typically from external sources like the internet.
+* outbound trafic is the data packets sent from within a network to external destinations.
+
+
+WHAT IS A SERVER,AND WHAT IS A CLIENT?
+-----------------------------------------
+* A sever is a system that provides resources, or data to other machines.
+* A client is a system or software that requests srvices or resources from a server,
+  common examples (providing web pages)and email servers.
 
 
 
