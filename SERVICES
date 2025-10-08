@@ -87,15 +87,23 @@ WHAT IS THE INTERNET?
     192.168.1.10
 
 📂 Types of IP Addresses
-    1. IPv4 (Most common)
-       Format: xxx.xxx.xxx.xxx (four numbers separated by dots)
-       Example: 192.168.1.1
-       Has about 4.3 billion possible addresses.
 
-    2. IPv6 (Newer, larger)
-       Format: Eight groups of hexadecimal numbers
-       Example: 2001:0db8:85a3:0000:0000:8a2e:0370:7334
-       Supports trillions of devices (needed as the internet grows).
+    1. what is IPv4:::::: 
+*IPv4 means Internet Protocol version 4.
+*It is the main system used to identify devices on a network using unique addresses.
+*An IPv4 address looks like this: 192.168.1.1.
+*It uses 32 bits, so there are about 4 billion unique addresses.
+*IPv4 helps computers find and talk to each other over the internet or local network.
+
+
+    2. 🌐 What is IPv6:::::
+*IPv6 means Internet Protocol version 6.
+*It is the new version of IP address used to identify devices on the internet.
+*It was created because IPv4 addresses (like 192.168.1.1) are running out.
+*IPv6 looks like this: 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+*It gives a huge number of unique addresses (almost unlimited).
+*It also supports better security, faster routing, and auto-configuration.
+
 
 🔄 Two Main Categories of IP Addresses
     Type	Description	Example
