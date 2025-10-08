@@ -376,6 +376,53 @@ NOTE:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 *in one subnet can't share maltiple data center
 
 
+class::5
+
+TASK:1
+----------
+
+*under the subscription create resouce group(RG),then under the RG create one vnet, then under the vnet create 2 subnets (sub1,sub2),
+* create the 2 VM each 2 subnets,then login the 1 VM using public ip example (ssh -i ~/Downloads/vm-keypair.pem azureuser@74.225.190.74)
+*onece login the 1 VM check the comunication b/w the another VM using (ping praivate ip).
+
+NOTE::
+* by the default VM's which are part of same network they will comunicate with each other 
+(even though they are part of two diffrent subnet's) 
+
+
+TASK:2
+--------
+
+HYBRID CONNECTIVITY OPTIONES
+------------------------------
+
+- If you have a two different networks , by default they wil not communicate with each other,
+  so how to enable the connectivity
+- From on prem Data center to Azure vnet how to set up the connectivity
+- From specific location or point how to enable the communication
+
+*Steps to enable the communication b/w two vnets
+
+- Create two vnets in the same region with subnets
+- Deploy vm’s
+- Check the connectivity b/w vm’s
+- And the Enable Vnet Peering - if the vnet’s are part of same region.
+
+                         *then try
+- Global Regions - if the vnet’s are part of different regions.
+
+
+
+
+
+
+
+
+
+
+
+
+
  
 
 
