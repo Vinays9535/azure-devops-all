@@ -411,7 +411,9 @@ HYBRID CONNECTIVITY OPTIONES
                          *then try
 - Global Regions - if the vnet’s are part of different regions,we need to enable global vnet peering.
 
-
+NOTE:::::
+* in the same region peering vnets i cold vnet peearing.
+* in the diffrent region peering vnets is cold global vnet peearing.
 
 
 
