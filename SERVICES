@@ -414,6 +414,7 @@ HYBRID CONNECTIVITY OPTIONES
 NOTE:::::
 * in the same region peering vnets i cold vnet peearing.
 * in the diffrent region peering vnets is cold global vnet peearing.
+* establish the connectivity , communication  b/w two diffrent vnet using microsft network.
 
 
 
