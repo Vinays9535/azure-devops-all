@@ -420,6 +420,96 @@ NOTE:::::
 
 
 
+POINT TO SITE CONNECTION
+----------------------------
+------------------------------
+
+USE CASE:::
+
+*when i am doing work from home or certain or specific location,connect to wifi,wifi is public network and i connected vm's using public network,
+ vm's is only having private ip in real time,can we dont able to connect or access the vm's.
+*it can be only work or access inside the specific network
+*now how we are going to achive, now i am work from home, i want to access vm's from my office laptop.
+* we can achive through point to site connection.
+*from specific location such as when you are working from home to access private ip we need point to site connection.
+
+HOW WE CONFIGURE P2S CONNECTION::::::::
+
+STEAPS::::::
+
+* create vnet with one subnet
+* create gateway subnet
+* create vpn gateway
+* generate root and chaild certificates
+* upload the root certificate data into vpn gateway
+* install chaild certificate into your pc
+* download the vpn client
+* connect to the vpn client
+
+note: SKU  it represents size of the resource
+
+
+1) create vnet with one subnet:::::
+
+* create virtual network
+* create one subnet  this is application subnet, purpose  default means application subnet
+* cerate one additional subnet   name it self , purpose   virtual network gateway
+* review and create
+
+2) create vpn gateway:::::::::
+
+* search virtual network gateways  service
+* search left bar vpn gateways---click---create
+* name,gateway type(vpn gateway),sku(vpngw1),select vnet,public ip address name(create new),enable active active mode(disable),
+ configure BGP(disable),enable key vault access(disable)then review and create.
+* it can take around 20 min for create, becuse all operationes take care by azure.
+
+3) generate root and chaild certificates:::::::
+
+ * go to browse  "  Configure server settings for P2S VPN Gateway certificate authentication "
+ * scroll down
+ * under the  generate a root certificate  click powershell instructiones for windows 10  
+ * shows this command
+
+    $params = @{
+    Type = 'Custom'
+    Subject = 'CN=P2SRootCert'
+    KeySpec = 'Signature'
+    KeyExportPolicy = 'Exportable'
+    KeyUsage = 'CertSign'
+    KeyUsageProperty = 'Sign'
+    KeyLength = 2048
+    HashAlgorithm = 'sha256'
+    NotAfter = (Get-Date).AddMonths(24)
+    CertStoreLocation = 'Cert:\CurrentUser\My'
+}
+$cert = New-SelfSignedCertificate @params
+
+* copy the this command then go to the command prompt set cli to windows power shell paste enter
+
+* under the  generate a chaild or claient certificate  click powershell instructiones for windows 10  
+* shows this command
+
+    $params = @{
+       Type = 'Custom'
+       Subject = 'CN=P2SChildCert'
+       DnsName = 'P2SChildCert'
+       KeySpec = 'Signature'
+       KeyExportPolicy = 'Exportable'
+       KeyLength = 2048
+       HashAlgorithm = 'sha256'
+       NotAfter = (Get-Date).AddMonths(18)
+       CertStoreLocation = 'Cert:\CurrentUser\My'
+       Signer = $cert
+       TextExtension = @(
+        '2.5.29.37={text}1.3.6.1.5.5.7.3.2')
+   }
+   New-SelfSignedCertificate @params
+
+* copy the this command then go to the command prompt set cli to windows power shell paste enter
+* mmc  ---- type in the cli enter
+
+
 
 
 
