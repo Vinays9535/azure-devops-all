@@ -531,7 +531,36 @@ now we will export the client or chaild certificate,
 4) upload the root certificate data into vpn gateway::::::
 
 * we go to vpn gateway--in the left bar select point to site configuration--click on configure now--
- select authentication--select azure certificate
+ select authentication--select azure certificate--when i choose azure certificate ask u details--they ask public certificate data.
+soo go to desk top--open the rootcert in notepad---copy without begin and end bars---paste the copied certificate in the public certificate 
+data place--mention the name rootcert,choose tunnel type---1kev2 and open vpn(ssl),in adresspool---provide ip address 10.50.0.0/24,then save it.
+*onece save then show download vpn client take 1 or 2 min for update this the download that,then download.
+
+** meanwile we create one vm without public ip-create-public ip name-review and create.
+
+*** onece download the vpn clinent,it's shows the zip file formate,let that extract.
+    HOW
+    * right click on the zip file--select extract all--extract.
+      open the extract file,it download the multiple files---click on windowsx64  doubble click on this file--run any way-yes-ok,then see vpn get install.
+
+
+  ** before we connect to this we need to install chaild or client certificate
+     HOW
+     * go to home page--select clientcertificate or chaild certificate--rightclick--install pfx--choose current user--next--
+       this is ask password---mention--next--finish---ok.
+
+
+   ** now we can go vpn icon--click on connect.
+     ** before the connect one more thing do---login to vm with private ip,copy the private ip--go to cli
+        *( ssh azureadmin@ip adress )
+        * ip config     ---- this command shows current setup.
+
+** comeback to vpn connect--click on connect--connect--continue--the status will show connected.
+
+
+
+NOTE:::::::::::
+               this is azure provided one,other vpn's or firewall also there in market example:: poloalto,global protect vpn  etc..
 
 
 
