@@ -508,9 +508,30 @@ $cert = New-SelfSignedCertificate @params
 
 * copy the this command then go to the command prompt set cli to windows power shell paste enter
 * mmc  ---- type in the cli enter
+* go to click on the file,add remove snap in,then click on the certificates,add,choose--my user account,click--finish,click--ok
+
+THEN-
+
+* certificate-current user--click the drop down button,click the personal drop down button,click on the certificates,
+now show the root and chaild or client certificate. now use this but can't be directly soo export this
+* right click on the root certificate--go to all tasks,click on export,next,choose no,do not export the private key,next,
+ select encription type--base-64--next.
+
+THEN--
+
+* we can brows where you want to choose,choose desktop--file name rootcert--save--ok.
+now we will export the client or chaild certificate,
+* select claient or chailed certifiate right click--all tasks--export--next--choose yes,export the private key--next--create the password--
+ next--create the password--next--choose the desktop--filename clientcert--save--finish--ok.
+
+( NOW WE CREATE THE CERTIFICATE )
 
 
 
+4) upload the root certificate data into vpn gateway::::::
+
+* we go to vpn gateway--in the left bar select point to site configuration--click on configure now--
+ select authentication--select azure certificate
 
 
 
