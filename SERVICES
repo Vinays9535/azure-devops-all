@@ -418,7 +418,7 @@ NOTE:::::
 
 
 
-
+CLASS::6
 
 POINT TO SITE CONNECTION
 ----------------------------
@@ -565,8 +565,42 @@ NOTE:::::::::::
 
 
 
+SITE TO SITE CONNECTION (S2S)::::
+-----------------------------------
 
- 
+🌐 What is an S2S (Site-to-Site) VPN in Azure?
+
+*It’s a secure tunnel (IPsec/IKE) that connects your on-premises network or another VNet to your Azure virtual network (VNet).
+*It uses the public internet but encrypts traffic end-to-end.
+*You configure it using a VPN Gateway on Azure and a VPN device (firewall/router) or another Azure gateway on the other side.
+
+⚙️ Key Components::::::::::::
+| Component                   | Description                                                                                                 |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| **Virtual Network (VNet)**  | Your private network space in Azure (like your company’s private LAN in the cloud).                         |
+| **Gateway Subnet**          | A special subnet inside your VNet named exactly `GatewaySubnet`. It’s reserved for the VPN gateway.         |
+| **Virtual Network Gateway** | A special type of Azure resource that sends encrypted traffic between networks.                             |
+| **Local Network Gateway**   | Represents the **on-premises** network or **remote VNet** IP address range and public IP of its VPN device. |
+| **Connection**              | The actual link that joins your Azure VPN Gateway and Local Network Gateway using a **shared key (PSK)**.   |
+
+
+
+🔒 Types of VPN Connections in Azure:::::::::::
+| Type                    | Description                                     | Use Case                               |
+| ----------------------- | ----------------------------------------------- | -------------------------------------- |
+| **S2S (Site-to-Site)**  | Connects your **on-prem network to Azure**      | For hybrid setups                      |
+| **VNet-to-VNet**        | Connects **two Azure VNets**                    | For multi-region or multi-subscription |
+| **P2S (Point-to-Site)** | Connects a **single client (laptop)** to a VNet | For developers or remote users         |
+| **ExpressRoute**        | Private, dedicated fiber connection             | For enterprise production workloads    |
+
+
+
+🧱 VPN Gateway Types::::::::::::::::::
+| Type                 | Use for                           | Protocol                      |
+| -------------------- | --------------------------------- | ----------------------------- |
+| **Route-based VPN**  | Recommended for all modern setups | Uses IKEv2 and routing tables |
+| **Policy-based VPN** | Older setup (less flexible)       | Uses static IPsec policies    |
+
 
 
 
