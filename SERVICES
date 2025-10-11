@@ -418,7 +418,7 @@ NOTE:::::
 
 
 
-CLASS::6
+CLASS::6     HYBRID CONNECTYVITES
 
 POINT TO SITE CONNECTION
 ----------------------------
@@ -567,6 +567,7 @@ NOTE:::::::::::
 
 SITE TO SITE CONNECTION (S2S)::::
 -----------------------------------
+-----------------------------------
 
 🌐 What is an S2S (Site-to-Site) VPN in Azure?
 
@@ -692,6 +693,7 @@ On-premises side:::::::::::::::
 
 🌐 What is ExpressRoute
 ----------------------------
+-----------------------------
 *ExpressRoute is a private connection between your on-premises network (like your office or data center) and Azure cloud — it does not use the public internet.
 
 ⚙️ Why we use ExpressRoute
