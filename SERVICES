@@ -644,3 +644,96 @@ STEPS::::::::::::
 *create 2 local network gateway one for azure other one for onprime.
 * ceate 2 vpn connectiones.
 * create 2 vm's for testing purpose using ping command.
+
+
+
+🌐 What is Active-Active Mode in S2S VPN:::::::::::
+-------------------------------------------
+In Active-Active mode, both VPN gateways (on each site) have two active tunnels running at the same time.
+So instead of one tunnel being active and the other being backup (like in Active-Passive), both tunnels carry traffic simultaneously.
+
+⚙️ Key Points to Know
+*Feature	Description
+*High Availability	If one tunnel or gateway goes down, traffic automatically continues through the other tunnel — no downtime.
+*Load Balancing	Both tunnels can share network traffic, improving speed and reliability.
+*Dual IPs	Each VPN gateway in Azure gets two public IPs (active-active). Your on-premises VPN device must also support two IPs.
+*Dynamic Routing	Uses BGP (Border Gateway Protocol) to automatically manage routes between both gateways.
+*Resiliency	Helps protect against network or hardware failure on either side.
+*Performance	Can give better throughput compared to a single tunnel setup.
+
+🧩 When to Use Active-Active Mode
+✅ Recommended when:
+*You need high availability and no downtime in your VPN connection.
+*You have critical workloads that can’t afford interruptions.
+*Your on-premises VPN device supports two simultaneous tunnels and BGP.
+🚫 Not needed when:
+*You have a simple setup or low-cost lab/test environment.
+*Your on-premises device doesn’t support dual VPN tunnels.
+🔐 Example Setup
+
+Azure side:::::::::::::::
+*One Virtual Network Gateway (VPN type: Route-based).
+*Two public IPs automatically assigned.
+On-premises side:::::::::::::::
+*VPN device configured with two local network gateways.
+*Each local network gateway connects to one Azure public IP.
+*BGP runs between both peers.
+
+⚠️ Important Requirements
+*VPN type must be Route-based (not Policy-based).
+*BGP is required for route exchange.
+*Both VPN devices (Azure and on-prem) must support IKEv2 and Active-Active mode.
+*Each connection must have a unique shared key (PSK) if not using certificates.
+
+🧠 In Simple Words
+*“Active-Active mode means both tunnels are active at once — giving better speed, balance, and reliability. If one fails, the other keeps traffic running automatically.”
+
+
+
+🌐 What is ExpressRoute
+----------------------------
+*ExpressRoute is a private connection between your on-premises network (like your office or data center) and Azure cloud — it does not use the public internet.
+
+⚙️ Why we use ExpressRoute
+*To get a faster and more reliable connection to Azure.
+*To have better security, since data doesn’t travel over the internet.
+*To handle large amounts of data safely between your data center and Azure.
+*To ensure low latency (less delay) for critical applications.
+*To provide high availability and stable performance compared to VPN.
+
+💡 In short:
+*ExpressRoute = Private, high-speed, secure connection between your company network and Azure (not over the internet).
+
+
+🌍 What is an Edge Location in Azure
+--------------------------------------------
+*An Edge Location in Azure is a point of presence (PoP) — a place close to users where data is cached or processed to make apps and content load faster.
+
+⚙️ Purpose
+*To deliver content quickly (like videos, files, websites).
+*To reduce latency (less delay) by serving users from the nearest location.
+*Used mainly by Azure CDN, Front Door, and Traffic Manager services.
+
+💡 In short:
+*Edge Location = A nearby Azure site that helps deliver your data faster to users.
+
+
+
+Here’s a simple comparison between ExpressRoute and Site-to-Site (S2S) VPN 👇
+----------------------------------------------------------------------------------
+
+
+| Feature              | **ExpressRoute**                                                         | **Site-to-Site (S2S) VPN**                        |
+| -------------------- | ------------------------------------------------------------------------ | ------------------------------------------------- |
+| **Connection type**  | Private connection (not over internet)                                   | Uses public internet (secured with encryption)    |
+| **Speed**            | Very high speed (up to 100 Gbps)                                         | Limited speed (depends on internet bandwidth)     |
+| **Security**         | Highly secure – private line                                             | Secure (data encrypted), but over public internet |
+| **Reliability**      | More stable and consistent                                               | Can vary if internet is unstable                  |
+| **Latency (delay)**  | Very low                                                                 | Higher (because of internet route)                |
+| **Cost**             | Expensive (used by large companies)                                      | Cheaper (good for small/medium setups)            |
+| **Use case**         | For mission-critical workloads, large data transfer, enterprise networks | For normal connectivity or testing environments   |
+| **Setup complexity** | More complex (needs telecom provider)                                    | Easier to set up directly in Azure                |
+
+💡 In short:
+*ExpressRoute = Private, fast, secure, costly.
+*S2S VPN = Internet-based, secure, slower, cheaper.
