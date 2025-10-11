@@ -574,6 +574,7 @@ SITE TO SITE CONNECTION (S2S)::::
 *It uses the public internet but encrypts traffic end-to-end.
 *You configure it using a VPN Gateway on Azure and a VPN device (firewall/router) or another Azure gateway on the other side.
 
+
 ⚙️ Key Components::::::::::::
 | Component                   | Description                                                                                                 |
 | --------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -603,4 +604,43 @@ SITE TO SITE CONNECTION (S2S)::::
 
 
 
+#WHAT IS THE PURPOSE OF VPN GATEWAY IN AZURE::::::
+-----------------------------------------------------
+*VPN Gateway in Azure is used to securely connect your Azure network (VNet) to another network — like your on-premises network or another VNet.
+*It sends data through an encrypted tunnel over the Internet.
+*It helps in site-to-site, point-to-site, or VNet-to-VNet connections.
+*Simply: it acts like a secure bridge between Azure and other networks.
 
+
+#WHAT IS THE PURPOSE OF THE LOCAL NETWORK GATEWAY IN AZURE::::::::::
+--------------------------------------------------------------------------
+*Local Network Gateway in Azure is used to represent your on-premises network (your office or home network) in Azure.
+
+     It stores details like:
+*Your public IP address of the VPN device (router/firewall).
+*The address ranges (subnets) of your on-premises network.
+👉 It helps Azure know where to send traffic when you create a Site-to-Site (S2S) VPN connection between your on-premises network and Azure Virtual Network.
+
+
+#WHAT IS THE PUPOSE OF THE VPN CONNECTION IN AZURE:::::::::::::::
+-------------------------------------------------------------------
+*A VPN connection in Azure is used to securely connect your on-premises network (your local office or data center)
+to your Azure virtual network (VNet) over the internet.
+👉 Purpose:
+*To create a secure tunnel between your local network and Azure.
+*To access Azure resources privately and safely.
+*To extend your data center into the Azure cloud.
+*To connect multiple VNets across regions or subscriptions securely.
+Example:
+*Your company office network ↔️ Azure network (through VPN) = Safe data transfer.
+
+
+HOW TO SET UP site to site (S2S) CONNECTION:::::::::
+STEPS::::::::::::
+---------------------------------
+
+*create two venet one is azure vnet other one is onprime vnet and create 2 subnets one is application subnet other one is gateway subnet.
+*creat 2 vpn gateway one for azure vnet other one for onprime vnet.
+*create 2 local network gateway one for azure other one for onprime.
+* ceate 2 vpn connectiones.
+* create 2 vm's for testing purpose using ping command.
