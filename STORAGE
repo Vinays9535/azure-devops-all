@@ -2,7 +2,6 @@
                                                                                                ------------------------
 
 
-
 ### 🌩️ **What is Cloud Storage?**
 
 Cloud storage is a service that lets you **store data (like files, photos, and videos) on the internet** instead of your computer’s hard drive.
@@ -72,7 +71,7 @@ NOTE::::
 *for one subscription we can create up to 300 storage accounts.
 *each storage account has the capacity to store up to 500TB of data.
 *the name of the storage account should be unique,you have to use only small letters.
-
+* azure storage account is a region specific.
 
 
 TYPES OF DATA
@@ -119,7 +118,7 @@ TYPES OF DATA
 ### 💡 **Main Azure Storage Services**
 ---------------------------------------------
 
-1. **🟦 Blob Storage (Binary Large Object):**
+1. **🟦 Blob Storage or container storage (Binary Large Object):**
 
    * Used to store **unstructured data** like images, videos, backups, and documents.
    * Example: Store app logs, website files, or photos.
@@ -147,5 +146,62 @@ TYPES OF DATA
    * Example: Used to store operating systems or app data for VMs.
 
 ---
+
+ note:::
+* when you choose General-purpose v2 (GPv2) in storage account creation we create all 4 types of storage services in same storage account.
+
+
+
+class::9:::::::::::
+
+HOW TO CREATE STORAGE ACCOUNT
+--------------------------------
+STEPS
+*select the storage account service.
+*fill the all nessesary fields.
+*onece created then go to resource.
+*in the left side choose data storage.
+
+
+1) HOW CREATE BLOB STORAGE OR CONTAINER STORAGE::::
+--------------------------------------------------------
+
+There are **three types of blobs**, each with a specific purpose 👇
+
+### 🟦 1. **Block Blob**
+
+* **Purpose:** Stores text or binary data (like documents, images, videos, backups).
+* **Use Case:** Best for storing **large files** that are read or written sequentially.
+* **Example:** Uploading media files, documents, or backups.
+* **Special feature:** Data is stored in blocks; you can upload or modify blocks individually.
+
+---
+
+### 🟩 2. **Append Blob**
+
+* **Purpose:** Optimized for **append operations** (adding data to the end).
+* **Use Case:** Ideal for **logging** or **data streaming** where data is continuously added.
+* **Example:** Server logs, IoT data streams.
+* **Special feature:** You can only **append** data, not modify or delete existing content.
+
+---
+
+### 🟨 3. **Page Blob**
+
+* **Purpose:** Stores random-access files (can read/write specific parts).
+* **Use Case:** Used for **virtual hard disks (VHDs)** of Azure Virtual Machines.
+* **Example:** OS disks, data disks for VMs.
+* **Special feature:** Data is divided into 512-byte **pages**, allowing **fast read/write**.
+
+STEPS
+
+*first create storage accont,then click on the storage name,in the left side bar show DATA STORAGE dropdown button this shows which type of 
+ storage service we choose,select one storage service exampale containers or blob storage,
+*open the container storage new page , click add container,mention the name and click create,now create container or blob storage service,
+ now this storage is private so can't access outside. when we try access the out side do this things,select my container,in the above shows change the access level,
+select that ,its shows opptions select private to container but not select so first go the in left side select settings under configuration,click configuration,
+its shows "Allow Blob anonymous" access enable this and save it, then come to "change access level" change permission private to container,now my stored data access in the public.
+*then go to container or blob storage inside we see upload option then upload any photos or videos etc,then click on we uploaded document its show URL copy the URL,
+and brows in google ,showed we whatever storing data.
 
 
