@@ -205,3 +205,10 @@ its shows "Allow Blob anonymous" access enable this and save it, then come to "c
 and brows in google ,showed we whatever storing data.
 
 
+WHAT IS END POINTS:::::::::::::
+-------------------------
+What is an Endpoint in Azure Storage account
+*An endpoint is basically a URL (web address) through which you can access the storage account services over the internet or via private network.
+ It’s like the entry point to use your Azure storage resources.
+
+
