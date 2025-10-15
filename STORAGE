@@ -1,0 +1,151 @@
+                                                                                                       STORAGE
+                                                                                               ------------------------
+
+
+
+### 🌩️ **What is Cloud Storage?**
+
+Cloud storage is a service that lets you **store data (like files, photos, and videos) on the internet** instead of your computer’s hard drive.
+The data is saved on remote servers managed by companies like **Google, Microsoft, Amazon, or Dropbox.**
+
+---
+
+### 💡 **Key Features**
+
+1. **Accessibility:** You can access your data from anywhere with internet.
+2. **Scalability:** Easily increase or decrease storage as needed.
+3. **Backup & Recovery:** Protects data from loss due to device failure.
+4. **Security:** Data is encrypted and protected by the cloud provider.
+5. **Collaboration:** Multiple people can work on the same files online.
+
+---
+
+### ☁️ **Popular Cloud Storage Providers**
+
+| Provider                      | Example Service    | Free Storage      |
+| ----------------------------- | ------------------ | ----------------- |
+| **Google Cloud**              | Google Drive       | 15 GB             |
+| **Microsoft Azure**           | Azure Blob Storage | Limited free tier |
+| **Amazon Web Services (AWS)** | Amazon S3          | 5 GB (Free Tier)  |
+| **Dropbox**                   | Dropbox Cloud      | 2 GB              |
+| **iCloud**                    | Apple iCloud       | 5 GB              |
+
+---
+
+### 🔐 **Types of Cloud Storage**
+
+1. **Object Storage** → Stores unstructured data (e.g., images, videos) – *Example: AWS S3*
+2. **File Storage** → Shared files with folders – *Example: Google Drive*
+3. **Block Storage** → For virtual machines and databases – *Example: Azure Disk Storage*
+
+---
+
+### 📈 **Advantages**
+
+* No need for physical hard drives
+* Automatic backup
+* Easy file sharing
+* High reliability (99.9% uptime)
+* Cost-effective (pay only for what you use)
+
+---
+
+### ⚠️ **Disadvantages**
+
+* Requires internet connection
+* Possible security or privacy risks
+* Ongoing subscription cost
+
+---
+
+AZURE STORAGE ACCOUNT
+--------------------------
+*Azure Storage Account is a place to store your data in Microsoft Azure cloud.
+*It lets you save files, images, videos, and backups safely online.
+*You can access your data anytime, from anywhere using the internet.
+*It supports different storage types like Blobs, Files, Queues, Tables, and Disks.
+*It is secure, scalable, and reliable for both small and large data.
+*You pay only for what you use (consumption-based model).
+*Azure automatically manages backup, availability, and replication.
+
+NOTE::::
+*for one subscription we can create up to 300 storage accounts.
+*each storage account has the capacity to store up to 500TB of data.
+*the name of the storage account should be unique,you have to use only small letters.
+
+
+
+TYPES OF DATA
+-----------------
+
+### 1. 📊 **Structured Data → Stored in Azure Table Storage**
+
+* Azure **Table Storage** is used to store **structured data** (rows & columns).
+* Each record is stored as a **key–value pair**.
+* **Example:** Customer details, employee records, product lists.
+* 💡 Works like a **NoSQL database**.
+
+---
+
+### 2. 📁 **Unstructured Data → Stored in Azure Blob Storage**
+
+* Azure **Blob Storage** is for **unstructured data** like images, videos, documents, and backups.
+* “Blob” means **Binary Large Object**.
+* **Example:** Store photos, videos, PDFs, logs, backups.
+* 💡 Commonly used for **media storage, website content, and data backup**.
+
+---
+
+### 3. 🧩 **Semi-Structured Data → Stored in Azure Cosmos DB or Blob Storage**
+
+* **Semi-structured data** has tags or keys (like JSON or XML).
+* Can be stored in **Azure Cosmos DB** (for fast queries) or **Blob Storage** (for large files).
+* **Example:** IoT sensor data, web logs, app telemetry.
+* 💡 Flexible for storing data that doesn’t fit in tables.
+
+---
+
+### 🌐 **Summary Table**
+
+| Data Type       | Example Data                 | Azure Service Used                 |
+| --------------- | ---------------------------- | ---------------------------------- |
+| Structured      | Customer records, sales data | **Azure Table Storage**            |
+| Unstructured    | Images, videos, backups      | **Azure Blob Storage**             |
+| Semi-Structured | JSON, XML, logs              | **Azure Cosmos DB / Blob Storage** |
+
+
+
+
+### 💡 **Main Azure Storage Services**
+---------------------------------------------
+
+1. **🟦 Blob Storage (Binary Large Object):**
+
+   * Used to store **unstructured data** like images, videos, backups, and documents.
+   * Example: Store app logs, website files, or photos.
+
+2. **📁 File Storage:**
+
+   * Used to create **shared file systems** in the cloud.
+   * Works like a **network file share (like shared folders in Windows)**.
+   * Example: Used by teams to share files across virtual machines.
+
+3. **📦 Queue Storage:**
+
+   * Used to **store and manage messages** between applications.
+   * Helps apps **communicate asynchronously** (send & receive messages).
+   * Example: Background job processing, order processing systems.
+
+4. **📊 Table Storage:**
+
+   * Used to store **structured NoSQL data** (key-value pairs).
+   * Example: Store user details, product info, or IoT data.
+
+5. **💽 Disk Storage:**
+
+   * Provides **virtual hard disks (VHDs)** for Azure Virtual Machines.
+   * Example: Used to store operating systems or app data for VMs.
+
+---
+
+
