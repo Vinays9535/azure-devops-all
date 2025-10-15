@@ -739,3 +739,99 @@ Here’s a simple comparison between ExpressRoute and Site-to-Site (S2S) VPN �
 💡 In short:
 *ExpressRoute = Private, fast, secure, costly.
 *S2S VPN = Internet-based, secure, slower, cheaper.
+
+
+VNET FEACTURES::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+----------------------------------
+
+ACVTIVITY LOG
+------------------
+* The **Azure Activity Log** records all **control-plane events** in your Azure subscription.
+* It shows **who did what and when** — for example, creating or deleting a resource.
+* It helps you **track changes** and **diagnose issues** in your Azure environment.
+* You can view it in the **Azure Portal**, **Azure CLI**, or **PowerShell**.
+* Logs can be **exported** to **Log Analytics**, **Event Hubs**, or **Storage Accounts** for long-term analysis.
+* It’s mainly used for **auditing**, **monitoring**, and **security investigations**.
+
+ACCESS CONTROL (IAM)
+-------------------------
+* **Access Control (IAM)** is used to **manage who can access Azure resources**.
+* It lets you **assign roles** to users, groups, or applications.
+* Roles define **what actions** they can perform (like read, write, or delete).
+* Common roles include **Owner**, **Contributor**, and **Reader**.
+* IAM helps ensure **secure and least-privilege access** to your resources.
+* You can manage access at **subscription**, **resource group**, or **resource** level.
+
+
+TAG
+------------
+* **Tags** are **key-value pairs** used to organize Azure resources.
+* They help you **categorize resources** (for example: `Environment = Production`).
+* You can use tags to **track costs**, **manage resources**, and **apply policies**.
+* Tags can be added to **resource groups** or **individual resources**.
+* They make it easier to **search, filter, and report** on resources in the Azure Portal.
+
+
+Diagnose and solve problems
+-------------------------------
+* **Diagnose and solve problems** helps you **troubleshoot issues** with your Azure resources.
+* It provides **automated tools and guidance** to find and fix common problems.
+* You can use it from the **Azure Portal** for services like VMs, App Services, or Storage.
+* It shows **health checks**, **error details**, and **recommended solutions**.
+* It helps you **quickly identify and resolve** issues to keep your resources running smoothly.
+
+Resource Visualizer
+--------------------�
+* **Resource Visualizer** shows a **diagram of your resources** and how they are connected.
+* It helps you **understand the structure** of your resource group.
+* You can see **relationships** between resources, like a VM and its network or storage.
+* It’s available in the **Azure Portal** under each **resource group**.
+* It helps with **troubleshooting, planning,** and **documentation** of your setup.
+
+ADRESS SPACE
+---------------
+* **Address space** defines the **range of IP addresses** used in a Virtual Network (VNet).
+* It is written in **CIDR notation** (for example, `10.0.0.0/16`).
+* All **subnets** in the VNet are created from this address space.
+* You can have **multiple address spaces** in one VNet if needed.
+* It helps ensure your network has **unique and organized IP addresses**.
+
+DDoS protection
+---------------------
+* its helps protect resource againest hakers through.
+* **DDoS Protection** helps protect your Azure resources from **Distributed Denial of Service (DDoS)** attacks.
+* It automatically **monitors and blocks malicious traffic**.
+* There are two types: **Basic** (free, always on) and **Standard** (advanced protection).
+* It helps keep your **applications available and secure**.
+* You can view **attack metrics and reports** in the Azure Portal.
+
+properties
+--------------
+* **Properties** show **detailed information** about an Azure resource.
+* They include data like **resource ID, location, subscription, and status**.
+* You can view them in the **Azure Portal** under the **Properties** section.
+* They help you **identify and manage** your resources easily.
+* Some properties are **read-only**, while others can be **edited or updated**.
+
+
+LOCKS
+--------
+* **Locks** prevent accidental deletion or modification of resources.
+* There are two lock types: **CanNotDelete** (prevents delete) and **ReadOnly** (prevents delete and modify).
+* Locks can be applied at **resource**, **resource group**, or **subscription** level.
+* Locks are enforced at the **management plane** (Azure control operations).
+* A lock is **inherited** by child resources when set on a resource group or subscription.
+* You can create or remove locks in the **Azure Portal**, **Azure CLI**, **PowerShell**, or ARM templates.
+* Locks do **not** stop someone with sufficient permissions from removing the lock first.
+* Locks don’t replace RBAC — they complement it to reduce accidental changes.
+* Use locks for **critical resources** (production VMs, key storage, networking) to avoid accidental disruptions.
+
+
+Connection troubleshoot
+---------------------------
+* **Connection Troubleshoot** helps you **test network connectivity** between Azure resources.
+* It shows whether a **connection is successful or blocked**.
+* You can use it in **Network Watcher** in the Azure Portal.
+* It helps find **routing issues, firewall blocks,** or **NSG rules** causing problems.
+* It’s useful for **diagnosing and fixing network connection issues** quickly.
+
