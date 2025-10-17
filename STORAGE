@@ -244,6 +244,63 @@ There are **four main types of replication** in Azure Storage:
 
 ---
 
+---
+
+### 🌐 **WHAT is Access Tier?**
+
+Access tiers in Azure define **how frequently you access your data** and **how much you pay** for storing it.
+They help you **save money** by choosing the right storage option based on **data usage**.
+
+---
+
+### 💡 **WHY use Access Tiers?**
+
+* To **reduce storage cost**.
+* To **store data efficiently** based on how often you use it.
+* To **manage lifecycle** of data (hot → cool → archive).
+
+---
+
+### 🕒 **WHEN and WHICH tier to use:**
+
+| Tier        | Used When                                              | Purpose                                           | Cost                                                                                       |
+| ----------- | ------------------------------------------------------ | ------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| **Hot**     | You **access data frequently** (daily or hourly)       | For active data and applications                  | 💰 **Highest cost per month**, but **low read/write cost**                                 |
+| **Cool**    | You **access data occasionally** (once in a few weeks) | For backup, test data, or infrequently used files | 💰 **Lower storage cost**, but **higher access cost**                                      |
+| **Archive** | You **rarely access data** (once in months or years)   | For long-term storage, compliance, old backups    | 💰 **Very low storage cost**, but **very high access cost** and **retrieval time** is long |
+
+---
+
+### 🧾 **Example:**
+
+* 🔥 **Hot Tier** → For website images or active user files.
+* ❄️ **Cool Tier** → For monthly reports or old project files.
+* 🧊 **Archive Tier** → For legal documents or old backups kept for years.
+
+---
+
+note:::; example
+* one movie trailer was uploaded the storage this one by defult store in the hot tier means more peoples watching or watched the trailer in first couple of days,
+ next some days this trailer was older now waching pepoles will be redused that time trailern will be move to hot to cool tier,
+ after 6 mothes that same trailer waching only few peoples only that time trailer move to cool tier to archive tier.
+
+
+
+
+⚙️ What is IOPS?
+------------------------------
+IOPS means Input/Output Operations Per Second.
+It measures how fast a storage device (like SSD or disk) can read and write data.
+
+💡 Why IOPS is Important
+It shows performance of storage.
+Higher IOPS = faster data access.
+Important for databases, VMs, and applications that need quick response.
+
+🕒 When to Use or Check IOPS
+When you need high-speed storage (for example, running SQL Server, SAP, or virtual machines).
+When you compare SSD vs HDD performance.
+When you choose Azure Disk types (Standard HDD, Standard SSD, Premium SSD, Ultra Disk — each gives different IOPS).
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -321,6 +378,13 @@ HOW TO CREATE fileshar STORAGE::::::::::::
   ## df -h
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 WHAT IS DISK::::::::::::
 ------------------------------
