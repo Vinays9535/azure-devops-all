@@ -287,6 +287,41 @@ note:::; example
 
 
 
+
+---
+
+### 🌐 **What is Lifecycle Management?**
+
+**Lifecycle Management** in Azure automatically **moves or deletes data** based on **rules** and **time**.
+It helps you **save money** and **manage storage efficiently**.
+
+### 💡 **Why use Lifecycle Management?**
+
+* To **reduce cost** (move old data to cheaper tiers).
+* To **automate data movement** (no manual work).
+* To **delete unused or expired data** automatically.
+
+### 🕒 **When to use it**
+
+* When data becomes **old or rarely accessed**.
+* When you want to **move data** from **Hot → Cool → Archive** automatically.
+* When you want to **delete files** after a certain number of days.
+
+
+### ⚙️ **How it works (Simple Example):**
+
+| Rule           | Action                            |
+| -------------- | --------------------------------- |
+| After 30 days  | Move from **Hot → Cool** tier     |
+| After 90 days  | Move from **Cool → Archive** tier |
+| After 365 days | **Delete** the blob automatically |
+
+### 🧠 **Simple Line to Remember:**
+> Lifecycle Management = **Automatic data movement and deletion to save cost over time.**
+
+
+
+
 ⚙️ What is IOPS?
 ------------------------------
 IOPS means Input/Output Operations Per Second.
