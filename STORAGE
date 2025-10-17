@@ -150,6 +150,7 @@ TYPES OF DATA
  note:::
 * when you choose General-purpose v2 (GPv2) in storage account creation we create all 4 types of storage services in same storage account.
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 class::9:::::::::::
@@ -193,7 +194,7 @@ There are **three types of blobs**, each with a specific purpose 👇
 * **Example:** OS disks, data disks for VMs.
 * **Special feature:** Data is divided into 512-byte **pages**, allowing **fast read/write**.
 
-STEPS
+STEPS::::::::::::::::::::::::::::::::::::::::::
 
 *first create storage accont,then click on the storage name,in the left side bar show DATA STORAGE dropdown button this shows which type of 
  storage service we choose,select one storage service exampale containers or blob storage,
@@ -211,4 +212,252 @@ What is an Endpoint in Azure Storage account
 *An endpoint is basically a URL (web address) through which you can access the storage account services over the internet or via private network.
  It’s like the entry point to use your Azure storage resources.
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+HOW TO CREATE fileshar STORAGE::::::::::::
+---------------------------------------------------------------
+* go to storage account then go to left side choose data storage dropdown button then click on file shares.create fileshare.
+*then open the you creted file shaer,click on connect its shows os names u choose any one u sutes,and click on show script,one script will be showing,
+ copy the that scripts,login to vm machin, then paste the copied script,
+* then check the file shaer is mounted or not
+  ## mount | grep -q ".file.core.windows.net" && echo "✅ Azure File Share is mounted" || echo "❌ Azure File Share is NOT mounted"
+  ## df -h
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+WHAT IS DISK::::::::::::
+------------------------------
+
+*In Azure, a disk is a virtual hard drive attached to your VM.
+*The OS disk holds the system files.
+*A data disk is an extra disk you can attach for storing data.
+*After attaching a data disk, you must format it and mount it to use it.
+*To check if it’s mounted, use
+
+                                                                                    LINUX VM
+                                                                                -----------------
+
+how to set up disk::
+---------------
+## ⚙️ **Set Up Disk in Azure with Linux VM**
+--------------------------------------------------
+
+### 🪜 Step 1: Create or Identify a Disk
+
+* Go to **Azure Portal → Disks → + Create**
+* Choose:
+
+  * **Resource Group**
+  * **Disk Name**
+  * **Region**
+  * **Size & Type** (Standard SSD, Premium SSD, etc.)
+* Click **Review + Create → Create**
+
+---
+
+### 🪜 Step 2: Attach the Disk to Your VM
+
+1. Go to **Azure Portal → Virtual Machines → Your VM**
+2. In the left menu, select **Disks**
+3. Click **+ Add data disk**
+4. Under **Name**, choose your existing disk (or create a new one)
+5. Click **Save**
+
+✅ The disk is now attached to your VM (but not yet usable inside Linux).
+
+---
+
+### 🪜 Step 3: Connect to Your VM
+
+SSH into your Linux VM:
+
+```bash
+ssh <username>@<vm_public_ip>
+```
+
+---
+
+### 🪜 Step 4: Find the New Disk
+
+Run:
+
+```bash
+lsblk
+```
+
+You’ll see something like:
+
+```
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda      8:0    0   30G  0 disk
+├─sda1   8:1    0   29G  0 part /
+sdb      8:16   0  128G  0 disk
+```
+
+👉 `sdb` is your new disk.
+
+---
+
+### 🪜 Step 5: Partition and Format the Disk
+
+If the disk is new (empty):
+
+```bash
+sudo fdisk /dev/sdb
+```
+
+Inside fdisk:
+
+```
+n   (new partition)
+p   (primary)
+1   (partition number)
+Enter (default start)
+Enter (default end)
+w   (write and exit)
+```
+
+Then format it:
+
+```bash
+sudo mkfs -t ext4 /dev/sdb1
+```
+
+---
+
+### 🪜 Step 6: Mount the Disk
+
+Create a folder to mount it:
+
+```bash
+sudo mkdir -p /mnt/datadisk
+```
+
+Mount it:
+
+```bash
+sudo mount /dev/sdb1 /mnt/datadisk
+```
+
+Check:
+
+```bash
+df -h
+```
+
+✅ You should see `/mnt/datadisk` listed.
+
+---
+
+### 🪜 Step 7: Make Mount Permanent
+
+Get the UUID:
+
+```bash
+sudo blkid /dev/sdb1
+```
+
+Add it to `/etc/fstab`:
+
+```bash
+UUID=<your-uuid> /mnt/datadisk ext4 defaults,nofail 0 2
+```
+
+Save, then test:
+
+```bash
+sudo mount -a
+```
+
+---
+
+### ✅ **Now Your Disk Is Ready to Use!**
+
+You can store files in `/mnt/datadisk` just like any other folder.
+
+
+                                                                                     WINDOWS VM
+                                                                                 -------------------
+
+
+---
+
+## ⚙️ **Set Up Disk in Azure with Windows VM**
+
+### 🪜 Step 1: Create or Identify a Disk
+
+1. Go to **Azure Portal → Disks → + Create**
+2. Choose:
+
+   * **Resource Group**
+   * **Disk Name**
+   * **Region**
+   * **Size & Type** (Standard SSD, Premium SSD, etc.)
+3. Click **Review + Create → Create**
+
+---
+
+### 🪜 Step 2: Attach the Disk to Your VM
+
+1. Go to **Azure Portal → Virtual Machines → Your VM**
+2. In the left menu, select **Disks**
+3. Click **+ Add data disk**
+4. Under **Name**, choose your existing disk (or create a new one)
+5. Click **Save**
+
+✅ The disk is now attached to your Windows VM.
+
+---
+
+### 🪜 Step 3: Connect to Your VM
+
+Use **Remote Desktop (RDP)** to connect:
+
+* In Azure Portal → VM → **Connect → RDP**
+* Download the RDP file and log in with your credentials.
+
+---
+
+### 🪜 Step 4: Open Disk Management
+
+Once inside the VM:
+
+1. Press **Windows + X** → Select **Disk Management**
+2. A prompt appears: *“You must initialize a disk before Logical Disk Manager can access it.”*
+3. Select the new disk (usually **Disk 1**)
+4. Choose **GPT** (recommended) or **MBR**, then click **OK**
+
+---
+
+### 🪜 Step 5: Create and Format a New Volume
+
+1. In Disk Management, right-click on the **Unallocated space** → **New Simple Volume**
+2. Follow the wizard:
+
+   * Assign a **drive letter** (e.g., D:)
+   * Choose **NTFS** as the file system
+   * Give it a name (e.g., *DataDisk*)
+3. Click **Finish**
+
+✅ Windows formats the disk and mounts it automatically.
+
+---
+
+### 🪜 Step 6: Verify the Disk
+
+Open **File Explorer**, and you’ll see your new disk (e.g., `D:`).
+You can now save and access files on it.
+
+---
+
+### ✅ **Done!**
+
+Your new Azure disk is now:
+
+* Attached to your VM
+* Initialized
+* Formatted
+* Ready to use 🎉
+
+---
